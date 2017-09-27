@@ -86,6 +86,18 @@ func main() {
 	ex5 := append(ex4, 2, 3, 4, 5)
 	printSlice(ex5)
 
+	for num, v := range ex5 {
+		fmt.Printf("2**%d = %d\n", num, v)
+	}
+
+	pow := make([]int, 10)
+	for i := range pow {
+		pow[i] = 1 << uint(i) // == 2**i
+	}
+	for _, value := range pow {
+		fmt.Printf("%d\n", value)
+	}
+
 	board := [][]string{
 		[]string{"_", "_", "_"},
 		[]string{"_", "_", "_"},
